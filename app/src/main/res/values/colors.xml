@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="bg_white">#F2F2F2</color>
+    <color name="appColorBlack">#141414</color>
+    <color name="appColorBlackSelected">#CF141414</color>
 </resources>

@@ -3,12 +3,12 @@ package com.example.autismdetector
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
-import android.os.Build
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.autismdetector.databinding.ActivityQuesAnsBinding
 
+@Suppress("DEPRECATION")
 class QuesAnsActivity : AppCompatActivity() {
     private lateinit var binding: ActivityQuesAnsBinding
     private var selectedByUser: Int? =null
@@ -17,7 +17,7 @@ class QuesAnsActivity : AppCompatActivity() {
     private lateinit var info: PatientInfo
 
     private val questions = listOf(
-        Question("Does the patient often notice small sounds when others do not", listOf(1,1,0,0)),
+        Question("Does the patient often notice small sounds when others do not?", listOf(1,1,0,0)),
         Question("Does the patient usually concentrate more on the whole picture, rather than the small details?",listOf(0,0,1,1)),
         Question("Does the patient find it easy to do more than one thing at once?",listOf(0,0,1,1)),
         Question("If there is an interruption, does the patient can switch back to what he/she was doing very quickly?",listOf(0,0,1,1)),
@@ -31,6 +31,7 @@ class QuesAnsActivity : AppCompatActivity() {
 
     private var answer= IntArray(10)
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityQuesAnsBinding.inflate(layoutInflater)
@@ -44,31 +45,43 @@ class QuesAnsActivity : AppCompatActivity() {
         binding.quesId.text = questions[quesPos].text
 
         binding.dAgreeOption.setOnClickListener{
-            if (selectedByUser==null){
+
                 selectedByUser = questions[quesPos].options[0]
                 binding.dAgreeOption.setTextColor(Color.GRAY)
-            }
+                binding.agreeOption.setTextColor(Color.WHITE)
+                binding.disagreeOption.setTextColor(Color.WHITE)
+                binding.dDisagreeOption.setTextColor(Color.WHITE)
+
         }
 
         binding.agreeOption.setOnClickListener{
-            if (selectedByUser==null){
+
                 selectedByUser = questions[quesPos].options[1]
+                binding.dAgreeOption.setTextColor(Color.WHITE)
                 binding.agreeOption.setTextColor(Color.GRAY)
-            }
+                binding.disagreeOption.setTextColor(Color.WHITE)
+                binding.dDisagreeOption.setTextColor(Color.WHITE)
+
         }
 
         binding.disagreeOption.setOnClickListener{
-            if (selectedByUser==null){
+
                 selectedByUser = questions[quesPos].options[2]
+                binding.dAgreeOption.setTextColor(Color.WHITE)
+                binding.agreeOption.setTextColor(Color.WHITE)
                 binding.disagreeOption.setTextColor(Color.GRAY)
-            }
+                binding.dDisagreeOption.setTextColor(Color.WHITE)
+
         }
 
         binding.dDisagreeOption.setOnClickListener{
-            if (selectedByUser==null){
+
                 selectedByUser = questions[quesPos].options[3]
+                binding.dAgreeOption.setTextColor(Color.WHITE)
+                binding.agreeOption.setTextColor(Color.WHITE)
+                binding.disagreeOption.setTextColor(Color.WHITE)
                 binding.dDisagreeOption.setTextColor(Color.GRAY)
-            }
+
         }
 
         binding.nextOption.setOnClickListener {
@@ -77,6 +90,12 @@ class QuesAnsActivity : AppCompatActivity() {
             }else{
                 changeNextQues()
             }
+        }
+
+        binding.backId.setOnClickListener{
+            intent = Intent(this,MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
     }
@@ -88,19 +107,19 @@ class QuesAnsActivity : AppCompatActivity() {
         if ((quesPos + 1) == questions.size) {
             binding.nextOption.text = "Submit"
             selectedByUser = null
-            binding.dAgreeOption.setTextColor(Color.BLACK)
-            binding.agreeOption.setTextColor(Color.BLACK)
-            binding.disagreeOption.setTextColor(Color.BLACK)
-            binding.dDisagreeOption.setTextColor(Color.BLACK)
+            binding.dAgreeOption.setTextColor(Color.WHITE)
+            binding.agreeOption.setTextColor(Color.WHITE)
+            binding.disagreeOption.setTextColor(Color.WHITE)
+            binding.dDisagreeOption.setTextColor(Color.WHITE)
 
             binding.numQues.text = "${quesPos+1} / ${questions.size}"
             binding.quesId.text = questions[quesPos].text
         } else if (quesPos < questions.size) {
             selectedByUser = null
-            binding.dAgreeOption.setTextColor(Color.BLACK)
-            binding.agreeOption.setTextColor(Color.BLACK)
-            binding.disagreeOption.setTextColor(Color.BLACK)
-            binding.dDisagreeOption.setTextColor(Color.BLACK)
+            binding.dAgreeOption.setTextColor(Color.WHITE)
+            binding.agreeOption.setTextColor(Color.WHITE)
+            binding.disagreeOption.setTextColor(Color.WHITE)
+            binding.dDisagreeOption.setTextColor(Color.WHITE)
 
             binding.numQues.text = "${quesPos+1} / ${questions.size}"
             binding.quesId.text = questions[quesPos].text
