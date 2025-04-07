@@ -22,7 +22,7 @@
         android:inputType="number"
         android:paddingStart="8dp"
         android:paddingBottom="15dp"
-        android:textColor="@android:color/darker_gray"
+        android:textColor="@color/primary_color"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,7 +91,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:backgroundTint="#1A000000"
+            android:backgroundTint="@color/primary_color"
             android:fontFamily="@font/poppins_medium"
             app:simpleItems="@array/enthinicity_items"
             />
@@ -210,7 +210,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"
-            android:backgroundTint="#1A000000"
+            android:backgroundTint="@color/primary_color"
             android:fontFamily="@font/poppins_medium"
             app:simpleItems="@array/country_items"
             />
@@ -329,7 +329,7 @@
         android:layout_marginBottom="32dp"
         android:text="Next"
         android:fontFamily="@font/poppins_medium"
-        android:backgroundTint="@color/black"
+        android:backgroundTint="@color/secondary_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
