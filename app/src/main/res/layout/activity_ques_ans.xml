@@ -21,7 +21,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_height="150dp"
 
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
@@ -39,13 +39,11 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="24dp"
-        android:layout_marginBottom="16dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Question"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/dAgreeOption"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
@@ -55,67 +53,67 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Definitely Agree"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:backgroundTint="@color/secondary_color"
-        app:layout_constraintBottom_toTopOf="@+id/agreeOption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ques_id" />
 
     <Button
         android:id="@+id/agreeOption"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Slightly Agree"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:backgroundTint="@color/secondary_color"
-        app:layout_constraintBottom_toTopOf="@+id/disagreeOption"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dAgreeOption" />
 
     <Button
         android:id="@+id/disagreeOption"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="8dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Slightly Disagree"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:backgroundTint="@color/secondary_color"
-        app:layout_constraintBottom_toTopOf="@+id/d_disagreeOption"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agreeOption" />
 
     <Button
         android:id="@+id/d_disagreeOption"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginStart="48dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="48dp"
-        android:layout_marginBottom="32dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Definitely Disagree"
         android:textColor="@color/white"
         android:textSize="16sp"
         app:backgroundTint="@color/secondary_color"
-        app:layout_constraintBottom_toTopOf="@+id/next_Option"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/disagreeOption" />
 
     <Button
         android:id="@+id/next_Option"
@@ -123,16 +121,16 @@
         android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="48dp"
         android:fontFamily="@font/poppins_bold"
         android:text="Next"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="18sp"
         app:backgroundTint="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/d_disagreeOption" />
 
     <TextView
         android:id="@+id/numQues"

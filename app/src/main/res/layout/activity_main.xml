@@ -13,30 +13,31 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginTop="32dp"
-        android:backgroundTint="@android:color/darker_gray"
+        android:backgroundTint="@color/primary_color"
         android:ems="10"
         android:fontFamily="@font/poppins_medium"
         android:hint="Enter the age"
         android:inputType="number"
         android:paddingStart="8dp"
         android:paddingBottom="15dp"
-        android:textColor="@color/primary_color"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/gender_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
         android:text="Select the gender:"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age_et" />
 
@@ -99,18 +100,18 @@
     </com.google.android.material.textfield.TextInputLayout>
 
 
-
     <TextView
         android:id="@+id/jaundice_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Does the patient have jaundice?"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Does the patient have jaundice?"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ethnicity_menu"/>
+        app:layout_constraintTop_toBottomOf="@+id/ethnicity_menu" />
 
     <RadioGroup
         android:id="@+id/jaundice_radio_group"
@@ -147,15 +148,16 @@
 
     <TextView
         android:id="@+id/autism_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Does the patient diagnosed with autism?"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Does the patient diagnosed with autism?"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/jaundice_radio_group"/>
+        app:layout_constraintTop_toBottomOf="@+id/jaundice_radio_group" />
 
     <RadioGroup
         android:id="@+id/autism_radio_group"
@@ -220,15 +222,16 @@
 
     <TextView
         android:id="@+id/app_used_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Does the patient used the app before?"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Does the patient used the app before?"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/country_menu"/>
+        app:layout_constraintTop_toBottomOf="@+id/country_menu" />
 
     <RadioGroup
         android:id="@+id/app_used_radio_group"
@@ -265,15 +268,16 @@
 
     <TextView
         android:id="@+id/relation_textview"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Who will made the answers?"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:fontFamily="@font/poppins_medium"
+        android:text="Who will made the answers?"
         android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/app_used_radio_group"/>
+        app:layout_constraintTop_toBottomOf="@+id/app_used_radio_group" />
 
     <RadioGroup
         android:id="@+id/relation_radio_group"
@@ -291,7 +295,6 @@
             android:layout_height="wrap_content"
             android:enabled="true"
             android:fontFamily="@font/poppins_medium"
-            android:paddingStart="16dp"
             android:text="Self"
             android:textSize="16sp" />
 
@@ -299,11 +302,10 @@
             android:id="@+id/no_relation_radio_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:checked="false"
             android:enabled="true"
             android:fontFamily="@font/poppins_medium"
-            android:paddingStart="16dp"
             android:text="Parent"
             android:textSize="16sp" />
 
@@ -311,11 +313,10 @@
             android:id="@+id/other_relation_radio_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
+            android:layout_marginStart="16dp"
             android:checked="false"
             android:enabled="true"
             android:fontFamily="@font/poppins_medium"
-            android:paddingStart="16dp"
             android:text="Others"
             android:textSize="16sp" />
     </RadioGroup>
@@ -326,13 +327,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:text="Next"
-        android:fontFamily="@font/poppins_medium"
         android:backgroundTint="@color/secondary_color"
+        android:fontFamily="@font/poppins_medium"
+        android:text="Next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relation_radio_group" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
